@@ -1,3 +1,3 @@
-# Fox
+# Fox： Focus Anywhere for Fine-grained Multi-page Document Understanding
 
 Coming soon...
