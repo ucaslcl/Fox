@@ -52,26 +52,37 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --encn-multi-8page-cross-vqa.json
 ```
 - There are 9 sub-tasks, the image-json pairs are as follows:
-(1) bilingual page OCR
 ```
+(1) bilingual page OCR
 --gtfile_path cn_page_ocr.json  --image_path cn_pdf_png/
 --gtfile_path en_page_ocr.json  --image_path en_pdf_png/
+
 (2) bilingual region-level OCR
---gtfile_path  --image_path 
+--gtfile_path cn_box_ocr.json  --image_path cn_pdf_png/
+--gtfile_path en_box_ocr.json  --image_path en_pdf_png/
+
 (3) bilingual line-level OCR
---gtfile_path  --image_path 
+--gtfile_path en_line_ocr.json  --image_path cn_pdf_png/
+--gtfile_path cn_line_ocr.json  --image_path en_pdf_png/
+
 (4) bilingual color-guided OCR
---gtfile_path  --image_path 
+--gtfile_path cn_onbox_ocr.json  --image_path cn_pdf_png_onbox/
+--gtfile_path en_onbox_ocr.json  --image_path en_pdf_png_onbox/
+
 (5) region-level translation
---gtfile_path  --image_path 
+--gtfile_path en_box_translation.json  --image_path en_pdf_png/
+
 (6) region-level summary
---gtfile_path  --image_path 
+--gtfile_path en_box_summary.json  --image_path en_pdf_png/
+
 (7) in-document figure caption
---gtfile_path  --image_path 
+--gtfile_path en_page_indoc_caption.json  --image_path en_pdf_png_render_laioncoco/
+
 (8) multi-page multi-region OCR
---gtfile_path  --image_path 
+--gtfile_path encn-multi-8page-box-ocr.json  --image_path pdfpng_encn_multi_8page/
+
 (9) cross-page VQA
---gtfile_path  --image_path 
+--gtfile_path encn-multi-8page-cross-vqa.json  --image_path pdfpng_encn_multi_8page/
 ```
 - Modify json path at the beginning of `_eval/eval_.py`. Then run eval script:
    
