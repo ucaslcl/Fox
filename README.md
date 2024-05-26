@@ -85,7 +85,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --gtfile_path encn-multi-8page-cross-vqa.json  --image_path pdfpng_encn_multi_8page/
 ```
 - For each sub-task, you need to run your model and record the results, we give a simple script here:
-```
+```shell
 import argparse
 import torch
 import os
