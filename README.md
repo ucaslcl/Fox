@@ -148,7 +148,7 @@ python3 eval_tools/eval_ocr_test.py --out_file "./results_final.json"
 (2) Calculate ROUGE:
 python3 eval_tools/eval_summary_test.py --out_file "./results_final.json"
 
-(3) Calculate accuracy:
+(3) Calculate Accuracy:
 python3 eval_tools/eval_qa_test.py --out_file "./results_final.json"
 ```
 
