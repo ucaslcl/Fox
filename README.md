@@ -24,11 +24,11 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 </p>
 
 ## 1. Benchmark Data and Evaluation Tool
-- Download the ChartSE images and jsons [here](https://drive.google.com/drive/folders/1YmOvxq0DfOA9YKoyCZDjpnTIkPNoyegQ?usp=sharing). 
-- Modify json path at the beginning of `ChartSE_eval/eval_ChartSE.py`. Then run eval script:
+- Download the images and jsons [here](). 
+- Modify json path at the beginning of `_eval/eval_.py`. Then run eval script:
    
 ```shell
-python ChartSE_eval/eval_ChartSE.py
+python _eval/eval_.py
 ```
 
 
