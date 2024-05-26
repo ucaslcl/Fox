@@ -29,7 +29,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 ## 1. Benchmark Data and Evaluation Tool
 - Download the testing images and ground-truth jsons [here](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing).
 - Unzip the above `focus_benchmark_test.zip` and you can get the folder:
-```shell
+```
 ./focus_benchmark_test/
 --cn_pdf_png/
 --cn_pdf_png_onbox/
@@ -51,9 +51,13 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --encn-multi-8page-box-ocr.json
 --encn-multi-8page-cross-vqa.json
 ```
+- There are 9 sub-tasks, the image-json pairs are as follows:
+```
+a = 1
+```
 - Modify json path at the beginning of `_eval/eval_.py`. Then run eval script:
    
-```shell
+```
 python _eval/eval_.py
 ```
 
