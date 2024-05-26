@@ -52,8 +52,42 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --encn-multi-8page-cross-vqa.json
 ```
 - There are 9 sub-tasks, the image-json pairs are as follows:
+- (1) bilingual page OCR
 ```
-a = 1
+--gtfile_path cn_page_ocr.json  --image_path cn_pdf_png/
+--gtfile_path en_page_ocr.json  --image_path en_pdf_png/
+```
+- (2) bilingual region-level OCR
+```
+--gtfile_path  --image_path 
+```
+- (3) bilingual line-level OCR
+```
+--gtfile_path  --image_path 
+```
+- (4) bilingual color-guided OCR
+```
+--gtfile_path  --image_path 
+```
+- (5) region-level translation
+```
+--gtfile_path  --image_path 
+```
+- (6) region-level summary
+```
+--gtfile_path  --image_path 
+```
+- (7) in-document figure caption
+```
+--gtfile_path  --image_path 
+```
+- (8) multi-page multi-region OCR
+```
+--gtfile_path  --image_path 
+```
+- (9) cross-page VQA
+```
+--gtfile_path  --image_path 
 ```
 - Modify json path at the beginning of `_eval/eval_.py`. Then run eval script:
    
