@@ -30,8 +30,26 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 - Download the testing images and ground-truth jsons [here](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing).
 - Unzip the above `focus_benchmark_test.zip` and you can get the folder:
 ```shell
---focus_benchmark
-----cn_png
+./focus_benchmark_test
+--cn_pdf_png/
+--cn_pdf_png_onbox/
+--en_pdf_png/
+--en_pdf_png_onbox/
+--en_pdf_png_render_laioncoco/
+--pdfpng_encn_multi_8page/
+--cn_box_ocr.json
+--cn_line_ocr.json
+--cn_onbox_ocr.json
+--cn_page_ocr.json
+--en_box_ocr.json
+--en_box_summary.json
+--en_box_translation.json
+--en_line_ocr.json
+--en_onbox_ocr.json
+--en_page_indoc_caption.json
+--en_page_ocr.json
+--encn-multi-8page-box-ocr.json
+--encn-multi-8page-cross-vqa.json
 ```
 - Modify json path at the beginning of `_eval/eval_.py`. Then run eval script:
    
