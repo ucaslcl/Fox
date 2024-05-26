@@ -52,20 +52,20 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --encn-multi-8page-cross-vqa.json
 ```
 - There are 9 sub-tasks, the image-json pairs are as follows:
-- (1) bilingual page OCR
+(1) bilingual page OCR
 ```
 --gtfile_path cn_page_ocr.json  --image_path cn_pdf_png/
 --gtfile_path en_page_ocr.json  --image_path en_pdf_png/
 ```
-- (2) bilingual region-level OCR
+(2) bilingual region-level OCR
 ```
 --gtfile_path  --image_path 
 ```
-- (3) bilingual line-level OCR
+(3) bilingual line-level OCR
 ```
 --gtfile_path  --image_path 
 ```
-- (4) bilingual color-guided OCR
+(4) bilingual color-guided OCR
 ```
 --gtfile_path  --image_path 
 ```
