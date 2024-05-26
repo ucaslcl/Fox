@@ -69,7 +69,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --gtfile_path cn_onbox_ocr.json  --image_path cn_pdf_png_onbox/
 --gtfile_path en_onbox_ocr.json  --image_path en_pdf_png_onbox/
 
-(5) region-level translation
+(5) region-level translation (English-to-Chinese)
 --gtfile_path en_box_translation.json  --image_path en_pdf_png/
 
 (6) region-level summary
@@ -84,10 +84,72 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 (9) cross-page VQA
 --gtfile_path encn-multi-8page-cross-vqa.json  --image_path pdfpng_encn_multi_8page/
 ```
-- Modify json path at the beginning of `_eval/eval_.py`. Then run eval script:
+- For each sub-task, you need to run your model and record the results, we give a simple script here:
+```
+import argparse
+import torch
+import os
+from tqdm import tqdm
+import json
+from PIL import Image
+
+def load_image(image_file):
+    image = Image.open(image_file).convert('RGB')
+    return image
+
+output_list = []
+
+def eval_model(args):
+
+    # TODO Use your model
+    model = build_your_model()
+
+    gts_path = args.gtfile_path
+    gts = json.load(open(gts_path))
+
+    print("Generate Results......")
+    for ann in tqdm(gts):
+        output_json = {}
+        
+        prompt = ann["conversations"][0]["value"]
+        image_file = ann["image"] 
+        image_file_path = os.path.join(args.image_path, image_file)
+        image = load_image(image_file_path)
+        
+        # TODO Use your model
+        outputs = model.generate(image, prompt)
+
+        output_json['image'] = ann["image"]
+        output_json['question'] = prompt 
+        output_json['label'] = ann["conversations"][1]["value"]
+        output_json['answer'] = outputs
+        output_list.append(output_json)
+
+    filename = args.out_file
+    with open(filename, 'w', encoding="utf-8") as file_obj:
+        json.dump(output_list, file_obj, ensure_ascii=False, indent=1)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model-name", type=str, default="")
+    parser.add_argument("--gtfile_path", type=str, required=True)
+    parser.add_argument("--image_path", type=str, required=True)
+    parser.add_argument("--out_file", type=str, default="./results_final.json")
+    args = parser.parse_args()
+    print(args)
+    eval_model(args)
+```
+- After obtaining the `./results_final.json`, run eval script to calculate metrics:
    
 ```
-python _eval/eval_.py
+(1) Calculate BLEU, METEOR, F1-score, Precision, Recall, Edit Distance:
+python3 eval_tools/eval_ocr_test.py --out_file "./results_final.json"
+
+(2) Calculate ROUGE:
+python3 eval_tools/eval_summary_test.py --out_file "./results_final.json"
+
+(3) Calculate accuracy:
+python3 eval_tools/eval_qa_test.py --out_file "./results_final.json"
 ```
 
 
