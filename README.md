@@ -29,7 +29,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 ## 1. Benchmark Data and Evaluation Tool
 - Download the testing images and ground-truth jsons [here](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing).
 - Unzip the above `focus_benchmark_test.zip` and you can get the folder:
-```
+```python
 ./focus_benchmark_test/
 --cn_pdf_png/
 --cn_pdf_png_onbox/
@@ -52,7 +52,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --encn-multi-8page-cross-vqa.json
 ```
 - There are 9 sub-tasks, the image-json pairs are as follows:
-```
+```shell
 (1) bilingual page OCR
 --gtfile_path cn_page_ocr.json  --image_path cn_pdf_png/
 --gtfile_path en_page_ocr.json  --image_path en_pdf_png/
@@ -85,7 +85,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 --gtfile_path encn-multi-8page-cross-vqa.json  --image_path pdfpng_encn_multi_8page/
 ```
 - For each sub-task, you need to run your model and record the results, we give a simple script here:
-```shell
+```python
 import argparse
 import torch
 import os
@@ -141,7 +141,7 @@ if __name__ == "__main__":
 ```
 - After obtaining the `./results_final.json`, run eval script to calculate metrics:
    
-```
+```shell
 (1) Calculate BLEU, METEOR, F1-score, Precision, Recall, Edit Distance:
 python3 eval_tools/eval_ocr_test.py --out_file "./results_final.json"
 
