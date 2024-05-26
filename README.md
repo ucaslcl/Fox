@@ -13,18 +13,26 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 </p>
 
 ## Release
-- [2024/5/26] 🔥 We have released the fine-grained benchmark [data]() to test the focusing capabilities of LVLM on dense PDF documents. 
+- [2024/5/26] 🔥 We have released the fine-grained benchmark [data](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing) to test the focusing capabilities of LVLM on dense PDF documents.
+
+
+<p align="center">
+<img src="assets/intro_00.png" style="width: 700px" align=center>
+</p>
 
 
 ## Contents
 - [1. Benchmark Data and Evaluation Tool](#1-benchmark-data-and-evaluation-tool)
 
-<p align="center">
-<img src="assets/append_all.png" style="width: 700px" align=center>
-</p>
+
 
 ## 1. Benchmark Data and Evaluation Tool
-- Download the images and jsons [here](). 
+- Download the testing images and ground-truth jsons [here](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing).
+- Unzip the above `focus_benchmark_test.zip` and you can get the folder:
+```shell
+--focus_benchmark
+----cn_png
+```
 - Modify json path at the beginning of `_eval/eval_.py`. Then run eval script:
    
 ```shell
