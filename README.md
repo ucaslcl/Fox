@@ -9,7 +9,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 
 
 <p align="center">
-<img src="assets/Fox.png" style="width: 150px" align=center>
+<img src="assets/Fox.png" style="width: 200px" align=center>
 </p>
 
 ## Release
@@ -30,7 +30,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 - Download the testing images and ground-truth jsons [here](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing).
 - Unzip the above `focus_benchmark_test.zip` and you can get the folder:
 ```shell
-./focus_benchmark_test
+./focus_benchmark_test/
 --cn_pdf_png/
 --cn_pdf_png_onbox/
 --en_pdf_png/
