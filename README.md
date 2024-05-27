@@ -13,7 +13,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 </p>
 
 ## Release
-- [2024/5/26] 🔥 We have released the fine-grained benchmark [data](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing) to test the focusing capabilities of LVLM on dense PDF documents.
+- [2024/5/26] 🔥 We have released the fine-grained benchmark [data](https://huggingface.co/datasets/ucaslcl/Fox_benchmark_data/tree/main) to test the focusing capabilities of LVLM on dense PDF documents.
 
 
 <p align="center">
@@ -27,7 +27,7 @@ Chenglong Liu, [Haoran Wei](https://scholar.google.com/citations?user=J4naK0MAAA
 
 
 ## 1. Benchmark Data and Evaluation Tool
-- Download the testing images and ground-truth jsons [here](https://drive.google.com/file/d/1dYll_BBuJIefvHmLHmgJZsg6Qkfzi4gj/view?usp=sharing).
+- Download the testing images and ground-truth jsons [here](https://huggingface.co/datasets/ucaslcl/Fox_benchmark_data/tree/main).
 - Unzip the above `focus_benchmark_test.zip` and you can get the folder:
 ```python
 ./focus_benchmark_test/
