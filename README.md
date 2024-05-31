@@ -153,8 +153,8 @@ python3 eval_tools/eval_qa_test.py --out_file "./results_final.json"
 ```
 
 
-## Acknowledgement
-- [Vary](https://github.com/Ucas-HaoranWei/Vary): the codebase and initial weights we built upon!
+## Contact
+If you have any questions related to the code or the paper, feel free to email (`liuchenglong20@mails.ucas.ac.cn`).
 
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE)
